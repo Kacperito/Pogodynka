@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navi"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.pogodynka.fregments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_dzienFragment"
+            app:destination="@id/dzienFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_lokalizacjaFragment"
+            app:destination="@id/lokalizacjaFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_tydzienFragment"
+            app:destination="@id/tydzienFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_dzienoldFragment"
+            app:destination="@id/dzienoldFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dzienFragment"
+        android:name="com.example.pogodynka.fregments.DzienFragment"
+        android:label="fragment_dzien"
+        tools:layout="@layout/fragment_dzien" >
+        <action
+            android:id="@+id/action_dzienFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tydzienFragment"
+        android:name="com.example.pogodynka.fregments.TydzienFragment"
+        android:label="fragment_tydzien"
+        tools:layout="@layout/fragment_tydzien" >
+        <action
+            android:id="@+id/action_tydzienFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lokalizacjaFragment"
+        android:name="com.example.pogodynka.fregments.LokalizacjaFragment"
+        android:label="fragment_lokalizacja"
+        tools:layout="@layout/fragment_lokalizacja" >
+        <action
+            android:id="@+id/action_lokalizacjaFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dzienoldFragment"
+        android:name="com.example.pogodynka.fregments.DzienOldFragment"
+        android:label="fragment_dzienold"
+        tools:layout="@layout/fragment_dzienold" >
+        <action
+            android:id="@+id/action_dzienoldFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
